@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --dark-color: #343a40;
+    --light-color: #f4f4f4;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    line-height: 1.5;
+    overflow: auto;
+    background-color: var(--light-color);
+}
+
+.container {
+    text-align: center;
+    margin: 10rem 0 0 0;
+    padding: 0 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 0 0;
+}
+
+.search-box input {
+    width: 50%;
+    padding: 0.5rem;
+    outline: none;
+    text-align: right;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1rem;
+    height: 2.5rem;
+}
+
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem;
+}
+
+#results .result {
+    padding: 2.5rem;
+    margin: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    text-align: left;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#results .result p {
+    margin: 0.5rem 0;
+    text-align: center;
+    font-family: "Cairo", sans-serif;
+}
+
+#word {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#meaning {
+    font-size: 1.5rem;
+}
+
+#number {
+    font-size: 1.3rem;
+}
+
+#surah {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 400px) {
+    #results .result {
+        padding: 2rem 1.5rem;
+    }
+
+    #results .result p {
+        font-size: 2.5rem;
+    }
+
+    #word {
+        font-size: 1rem;
+    }
+
+    #meaning {
+        font-size: 0.01rem;
+    }
+
+    #number {
+        font-size: 1rem;
+    }
+
+    #surah {
+        font-size: 1rem;
+    }
+}
+
+#install-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #317EFB;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+
+  #install-button:active {
+    background-color: #1d4b82;
+  }
+  
