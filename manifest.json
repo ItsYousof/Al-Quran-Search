@@ -1,11 +1,10 @@
 {
   "name": "السراج في القرآن",
   "short_name": "السراج",
-  "description": "Search for the meaning of Quranic words.",
-  "start_url": "https://siraj.safarah.org",
+  "start_url": ".",
+  "background_color": "#f5f5f5",
+  "theme_color": "#f4f4f4",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#317EFB",
   "icons": [
     {
       "src": "/icons/android-icon-36x36.png",
