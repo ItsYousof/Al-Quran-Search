@@ -1,4 +1,4 @@
-const CACHE_NAME = 'v2-quiz-update-1.0'; 
+const CACHE_NAME = 'v2-quiz-update-1.2'; 
 // List of files to cache
 const FILES_TO_CACHE = [
     '/',

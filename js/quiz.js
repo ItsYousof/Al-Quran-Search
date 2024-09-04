@@ -75,66 +75,66 @@ async function startQuiz() {
 }
 
 function startTimer(time) {
-    let secondsForRest = time;
+    clearInterval(timer); // Clear any existing timer before starting a new one
+    let timeRemaining = time; 
+    document.getElementById('progress').max = timeRemaining;
+    document.getElementById('progress').value = timeRemaining;
+    
     timer = setInterval(() => {
-        document.getElementById('progress').value = time;
-        time--;
+        timeRemaining--;
+        document.getElementById('progress').value = timeRemaining;
 
-        if (time < 0) {
+        if (timeRemaining <= 0) {
             clearInterval(timer);
-            if (questionIndex < quizQuestions.length - 1) {
-                time = secondsForRest;
-                document.getElementById('progress').value = time;
-                startTimer(time);
-                nextQuestion();
-            } else {
-                // End the quiz if it's the last question
-                endGame();
-            }
+            nextQuestion();
         }
     }, 1000);
 }
 
 
+
 function showQuestion() {
-    // Ensure that quizQuestions and questionIndex are valid
     if (!quizQuestions || questionIndex >= quizQuestions.length) return;
 
     let question = quizQuestions[questionIndex];
-
-    // Set question text
     document.getElementById('question').innerText = question.question;
-
-    // Set meaning text
     document.getElementById('meaning').innerText = question.meaning || '';
 
-    // Get all buttons for options
     let options = [];
     for (let i = 0; i < 4; i++) {
         options.push(document.getElementById('option-' + i));
     }
 
-    // Ensure we have four options to display
     let allOptions = [question.answer, ...question.options];
-
-    // Shuffle options to ensure they are in random order
     let shuffledOptions = allOptions.sort(() => Math.random() - 0.5).slice(0, 4);
 
-    // Update buttons with shuffled options
     options.forEach((button, index) => {
         button.innerText = shuffledOptions[index] || '';
-        button.onclick = () => {
-            if (shuffledOptions[index] === question.answer) {
-                score++;
-            }
-            nextQuestion();
-        };
+        button.onclick = () => handleAnswer(shuffledOptions[index], question.answer);
     });
+
+    // Determine the time based on difficulty level
+    let time;
+    switch (difficulty) {
+        case 'easy':
+            time = 15;
+            break;
+        case 'medium':
+            time = 10;
+            break;
+        case 'hard':
+            time = 5;
+            break;
+    }
+
+    // Start the timer for the current question
+    startTimer(time);
 }
 
 
+
 function endGame() {
-    clearInterval(timer);
+    clearInterval(timer);  // Clear the timer when the quiz ends
     showHomeScreen();
     showResultScreen();
     document.getElementById('score').innerText = `${score} / ${quizQuestions.length}`;
@@ -155,27 +155,16 @@ function endGame() {
     }, 3000);
 }
 
+
 function nextQuestion() {
     questionIndex++;
     if (questionIndex < quizQuestions.length) {
         showQuestion();
-        let time;
-        switch (difficulty) {
-            case 'easy':
-                time = 15;
-                break;
-            case 'medium':
-                time = 10;
-                break;
-            case 'hard':
-                time = 5;
-                break;
-        }
-        startTimer(time);
     } else {
         endGame();
     }
 }
+
 
 
 function loadSurahs() {
