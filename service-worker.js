@@ -7,12 +7,15 @@ self.addEventListener('install', event => {
         '/styles/style.css',
         '/js/script.js',
         '/pwa.js',
+        './quiz.html',
         '/icons/android-icon-36x36.png',
         '/icons/android-icon-48x48.png',
         '/icons/android-icon-72x72.png',
         '/icons/android-icon-96x96.png',
         '/icons/android-icon-144x144.png',
-        '/icons/android-icon-192x192.png'
+        '/icons/android-icon-192x192.png',
+        './js/quiz.js',
+        './css/quiz.css'
       ]).catch(error => {
         console.error('Failed to cache files on install:', error);
       });

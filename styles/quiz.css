@@ -1,0 +1,180 @@
+.back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.options button {
+    padding: 5px 9px;
+    background-color: #317EFB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.1s ease;
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.information h2{
+    text-align: right;
+    margin-top: 50px;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.information p {
+    text-align: right;
+    margin-top: 50px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+
+#quiz {
+    display: none;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.top progress {
+    margin: 0 10px;
+    width: 100%;
+        height: 20px;
+        border-radius: 50px;
+        background-color: #eee;
+        transition: width 300ms ease;
+}
+
+progress[value]::-webkit-progress-bar {
+    width: 100%;
+    height: 20px;
+    border-radius: 50px;
+    background-color: #eee;
+    transition: width 300ms ease;
+}
+progress[value]::-webkit-progress-value {
+    width: 0;
+    border-radius: 50px;
+    background-color: rgb(0, 128, 0);
+    transition: width 300ms ease;
+}
+
+#question {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+    margin: 10px;
+}
+
+#meaning {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+#surah-selection {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+input[type="search"] {
+    margin: 10px;
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 0 10px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.surah-div {
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(145, 126, 100, 0.242);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+#word-input {
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+#results {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+
+    h2 {
+        font-size: 38px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    button {
+        position: fixed;
+        bottom: 10px;
+        left: 40px;
+        width: 80%;
+        padding: 10px 20px;
+        background-color: #317EFB;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        font-family: 'Cairo', sans-serif;
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+}

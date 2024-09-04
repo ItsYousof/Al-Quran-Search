@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f4f4f4">
+    <meta name="theme-color" content="#317EFB">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
@@ -13,14 +13,6 @@
     <link rel="icon" href="icons/favicon.ico">
     <script src="https://kit.fontawesome.com/828c19ed9a.js" crossorigin="anonymous"></script>
     <script src="pwa.js" defer></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-icon-120x120.png">
-    <meta name="description" content="السراج في القرآن">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default"> <!-- or black-translucent, black -->
-    <meta name="apple-mobile-web-app-title" content="السراج">
-    
 </head>
 <body>
     <div class="container">
@@ -31,6 +23,12 @@
     </div>
     <div id="results"></div>
     <script src="js/script.js"></script> 
-    <button id="install-button" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); padding: 10px 20px; background-color: #317EFB; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Install App</button>
+    <footer>
+        <button id="install-button"
+            style="display: none;padding: 10px 20px; background-color: #317EFB; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-right: 10px;">Install
+            App</button>
+        <button id="quiz-btn" onclick="window.location.href = 'quiz.html';"
+            style="padding: 10px 20px; background-color: #317EFB; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Quiz</button>
+    </footer>
 </body>
 </html>

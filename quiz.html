@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار - السراج في بيان القرآن</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://ka-f.fontawesome.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/828c19ed9a.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="icons/favicon.ico">
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+    <div class="back" id="backBtn">
+        <a href="index.html" id="back-btn"><i class="fas fa-arrow-left"></i></a>
+    </div>
+
+    <section id="home">
+        <h1>اختر صعوبة</h1>
+
+        <div class="options">
+            <button id="easy">سهل</button>
+            <button id="medium">متوسط</button>
+            <button id="hard">صعب</button>
+        </div>
+        <br>
+        <hr>
+
+        <div class="information">
+            <h2>:كيف تلعب</h2>
+            <p>ستحصل على 10 أسئلة. ستتوفر لك 15، 10، أو 5 ثواني حسب الصعوبة التي تختارها.</p>
+            <p>سيُطلب منك تحديد السورة التي تحتوي على الآية المقدمة أو تحديد الآية في أي سورة كانت.</p>
+        </div>
+
+        <br>
+        <hr>
+
+        <section id="surah-selection">
+            <h2>اختر السور التي تريد الاختبار عليها</h2>
+            <input type="search" placeholder="ابحث في السراج" id="surah-search-input">
+            <div id="surats"></div>
+        </section>
+    </section>
+
+    <section id="quiz" style="display: none;">
+        <div class="top">
+            <progress id="progress" value="0" max="15"></progress>
+        </div>
+
+        <div class="main-quiz">
+            <h3 id="question"></h3>
+            <p id="meaning"></p>
+
+            <div class="options">
+                <button id="option-0"></button>
+                <button id="option-1"></button>
+                <button id="option-2"></button>
+                <button id="option-3"></button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="results">
+        <h2>النتيجة</h2>
+        <hr>
+        <h3 id="score"> / ١٠</h3>
+
+
+    </section>
+
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>
