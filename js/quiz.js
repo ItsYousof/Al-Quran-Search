@@ -131,7 +131,12 @@ function showQuestion() {
     startTimer(time);
 }
 
-
+function handleAnswer(selectedOption, correctAnswer) {
+    if (selectedOption === correctAnswer) {
+        score++;
+    }
+    nextQuestion();
+}
 
 function endGame() {
     clearInterval(timer);  // Clear the timer when the quiz ends
