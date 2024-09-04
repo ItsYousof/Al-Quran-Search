@@ -75,6 +75,7 @@ async function startQuiz() {
 }
 
 function startTimer(time) {
+    let secondsForRest = time;
     timer = setInterval(() => {
         document.getElementById('progress').value = time;
         time--;
@@ -82,7 +83,9 @@ function startTimer(time) {
         if (time < 0) {
             clearInterval(timer);
             if (questionIndex < quizQuestions.length - 1) {
-                // Move to the next question without awarding points
+                time = secondsForRest;
+                document.getElementById('progress').value = time;
+                startTimer(time);
                 nextQuestion();
             } else {
                 // End the quiz if it's the last question
